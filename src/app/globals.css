@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-color: #080c14;
+  --text-color: #f1f5f9;
+}
+
+html.light {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+}
+
+html.dark {
+  --bg-color: #080c14;
+  --text-color: #f1f5f9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Selection style */
+::selection {
+  background-color: #10b981;
+  color: #022c22;
+}
